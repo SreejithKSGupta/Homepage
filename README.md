@@ -14,3 +14,10 @@ default tab like chrome and firefox directly, or using extentions such as new ta
 ### Stack ###
 -- Front end made using Vanilla JavaScript, HTML5 and CSS
 -- Backend and Hosting in google firebase
+
+![homepage full blown](https://user-images.githubusercontent.com/72187226/196019288-4e9e0258-3b44-4099-a942-55dd149d8ed7.png)
+![homepage notes](https://user-images.githubusercontent.com/72187226/196019291-95e14ff4-394e-4aae-8c49-ad7e82fe26ad.png)
+![homepage settings](https://user-images.githubusercontent.com/72187226/196019292-089cfbe3-e172-4023-a208-a3440014c31b.png)
+![homepaage minimalist](https://user-images.githubusercontent.com/72187226/196019293-b06de1fb-5bf0-45ec-ad2f-ade797e009d0.png)
+
+
