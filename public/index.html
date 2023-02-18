@@ -1,29 +1,24 @@
-<!------------------------------------------------------  start of code  --------------------------------------------------->
-
 <!DOCTYPE html>
 <html lang="en">
-<!------------------------------------------------------ head sections   --------------------------------------------------->
 
 <head>
-    <!-- meta description for SEO-->
+    <meta charset="UTF-8">
     <meta name="description" content="A fully customisable home page for your browser, on a tablet, laptop or Pc. Easy to sync all your favourite websites across Devices.">
     <meta name="keywords" content=" custom homepage, how to customize browser, homepage, customisze">
     <meta name="author" content="Sreejith K S">
-    <meta robots="index, follow" />
-    <meta dc.title="Homepage - A custom homepage that changes for you" />
+    <meta robots="index, follow">
+    <meta dc.title="Homepage - A custom homepage that changes for you">
 
     <!--convert into prograssive web app-->
+    <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Homepage">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="pwaicons/apple-icon-180.png">
-
+    <meta name="application-name" content="Homepage">
+    <meta name="msapplication-TileColor" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="google-site-verification" content="XDA2LPCL0xZCabIbNlRcZofmQOTFmiM9X1J68xdyvkc" />
-
+    <meta name="google-site-verification" content="XDA2LPCL0xZCabIbNlRcZofmQOTFmiM9X1J68xdyvkc">
     <link rel="apple-touch-startup-image" href="pwaicons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="pwaicons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
     <link rel="apple-touch-startup-image" href="pwaicons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -50,388 +45,239 @@
     <link rel="apple-touch-startup-image" href="pwaicons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
     <link rel="apple-touch-startup-image" href="pwaicons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="pwaicons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-
-
-
-
-
-    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" href="pwaicons/apple-icon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
     <link rel="stylesheet" type="text/css" href="css/index.css">
-
-
-    <link rel="shortcut icon" href="res/asas.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="res/asas.png" type="image/x-icon">
+    <label class="lbl" for="SType">Search Type</label>
+    <label class="lbl" for="provider">Search Engine</label>
+   
 </head>
 
-<body id="boddy">
-    <!-------------------------------------------------  body sections   --------------------------------------------------->
-
-    <div id="toppart">
-
-        <div>
-            <p id="date"></p>
-            <div id="tmediv">
-                <p id="hour"></p>
-                <p id="min"></p>
-                <p id="ampm"></p>
-            </div>
+<body id="boddy" class="col">
+    <div id="toppart" class="row">
+        <div id="datetime" class="col">
+            <div id="date"></div>
+            <div id="tmediv"></div>
         </div>
         <div id="grtusr"> Hello Guest </div>
-        <div id="profile" onclick="toggleprofcard()">
-            <div id="prof"><img id="proimg" src="res/defuser.webp" alt="default user logo"> </div>
-            <!--- profile popup-->
-            <div id="profcard" style="display: none;">
-                <div id="profname">name</div>
-                <button id="signinout" class="btn" onclick="signinout()">Sign In</button>
+        <div id="prof"><img id="proimg" src="res/defuser.webp" alt="default user logo"> </div>
+    </div>
+    <div id="midpart" class="row">
+        <select id='provider'>
+            <option value="google">Google</option>
+            <option value="bing">Bing</option>
+            <option value="duckduckgo">DuckDuckGo</option>
+            <option value="youtube">YouTube</option>
+        </select>
+        <select id='SType'>
+            <option value="web">Web</option>
+            <option value="img">Images</option>
+            <option value="video">Video</option>
+        </select>
+        <div id="searchbox" class="row">
+            <input type="text" id="search" placeholder="Search" autofocus spellcheck="false">
+            <img id="searchbtn" src="res/sch.webp" alt="Search">
+        </div>
+
+    </div>
+    <div id="btmpart">
+        <div id="div-sites" class="row">
+            <div class="sitebox" id="ftrppup">
+                <img  class="Siteicon" src="res/moreopt.webp" alt="add a new site">
+                <div class="sitename">Settings</div>
             </div>
         </div>
-
     </div>
-
-
-    <div id="midpart">
-        <div id="SES">
-            <select id='provider'>
-                <option value="google">Google</option>
-                <option value="bing">Bing</option>
-                <option value="duckduckgo">DuckDuckGo</option>
-                <option value="youtube">YouTube</option>
-            </select>
-        </div>
-        <div id="searchbox">
-            <input type="text" id="search" placeholder="Search" autofocus spellcheck="false">
-            <button id="searchbtn" onclick="search()"><img id="schimg" src="res/sch.webp" alt="Search"></button>
-        </div>
+    <!-------------------------------------------------  footer   ---------------------------------------------->
+    <div id="footer" class="popup row">
+        <div id="adbtn" class="fbtn"> <img class="aimg" src="res/add.webp" alt="add a new site"></div>
+        <div id="delt" class="fbtn"><img class="aimg" src="res/del.webp" alt="deletemsites"></div>
+        <div id="sett" class="fbtn"><img class="aimg" src="res/sett.webp" alt="settings"></div>
+        
     </div>
-
-    <div id="btmpart">
-        <div id="div-sites">
-        </div>
+ <!-------------------------------------------------  profile   ---------------------------------------------->
+    <div id="profcard" class="popup col">
+        <div id="profname">name</div>
+        <div id="signinout" class="btn">Sign In</div>
+        <img src="res/sett.webp" alt="settings" id="profsettings">
     </div>
-    <div id="aactionbtn">
-        <button id="actbtn" onclick="showhide('footer')" class="fbtn"> <img class="aimg" src="res/moreopt.webp" alt="more options"></button>
-
-    </div>
-
-    <div id="footer" class="popup">
-        <div id="adbtn"><button id="adn" onclick="showhide('addsite-tooltip')" class="fbtn"> <img class="aimg" src="res/add.webp" alt="add a new site"></button>
-        </div>
-        <div id="delt"> <button id="deletebtn" onclick="del()" class="fbtn"><img class="aimg" src="res/del.webp" alt="deletemsites"></button></div>
-        <div id="sett"> <button id="settbtn" onclick="showhide('settings-tooltip')" class="fbtn"><img class="aimg" src="res/sett.webp" alt="settings"></button></div>
-    </div>
-
-    <div id=notpd> <button id="notepadbtn" onclick="showhide('notepad-tooltip')" class="fbtn"><img class="aimg" src="res/notepad.webp" alt="notepad"></button></div>
-    <!-------------------------------------------------  Hidden sections go here   ---------------------------------------------->
-
-
-    <!------------------------------------------------- notes   ---------------------------------------------->
-
-    <div id="notepad-tooltip" class="popup">
-
-        <div class="row" id="notepadrow">
-            <input type="text" class=" noteipt " placeholder="Add Note" id="notepaddtextipt">
-            <button id="adnnte" class="notepadbtns" onclick="addnnote()"> <img class="ui-buttons" src="res/add-icon.webp" alt="add note"> </button>
-            <button class="notepadbtns" onclick="clearpop('notepad-tooltip')"><img class="ui-buttons" src="res/closeicon.webp" alt="close notes tooltp"> </button>
-        </div>
-        <div id="notelist">
-
-        </div>
-    </div>
-
     <!------------------------------------------------- add site  ---------------------------------------------->
-
-
-    <div id="addsite-tooltip" class="popup">
+    <div id="addsite-tooltip" class="popup col">
         <input type="text" name="Website name" class="ipt" placeholder="enter the site name" id="site-name">
         <input type="text" name="Website url" placeholder="enter site URL" class="ipt" id="site-url">
         <div class="row">
-            <button class="btn" id="add-site-btn" onclick="addsitecomp()">Add</button>
-            <button class="btn" id="cansl-site-btn" onclick="clearpop('addsite-tooltip')">Cancel</button>
+            <div class="btn" id="add-site-btn">Add</div>
+            <div class="btn" id="cansl-site-btn">Cancel</div>
         </div>
     </div>
-
     <!------------------------------------------------- settings  ---------------------------------------------->
-
-
     <div id="settings-tooltip" class="popup">
-
-
-        <div class="stitem" id="settingsheading">
-            <h2 class="sthead">Settings</h2>
-            <button class="btn nbtn" onclick="clearpop('settings-tooltip')">X</button>
+        <div class="stitem">
+            <p class="sthead">Settings</p>
+            <div id="cnsl-sett-btn" class="nbtn">x</div>
         </div>
+        <div class="stitem">
 
+            <p class="setoptnnme" class="settingstext">Font</p class="setoptnnme">
+            <label class="lbl" for="fontselector">Font family</label>
+            <select id="fontselector">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Impact">Impact</option>
+                <option value="Lucida Console">Lucida Console</option>
+                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                <option value="Palatino Linotype">Palatino Linotype</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Verdana">Verdana</option>
 
+            </select>
 
-
-        <div id="settingsmenu">
-
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Font</p class="setoptnnme">
-                <select id="font" onchange="changefont()" style="font-size:var( --fontmed)">
-                        <option value="Arial">Arial</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
-                        <option value="Courier New">Courier New</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Impact">Impact</option>
-                        <option value="Lucida Console">Lucida Console</option>
-                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-                        <option value="Palatino Linotype">Palatino Linotype</option>
-                        <option value="Tahoma">Tahoma</option>
-                        <option value="Trebuchet MS">Trebuchet MS</option>
-                        <option value="Verdana">Verdana</option>
-                    </select>
-            </div>
-
-
-
-            <div class="stitem">
-                <label class="settingstext" for="uploadBannerImage"> Change wallpaper</label>
-                <div class="parent-div">
-                    <button class="btn-upload" id="wpchangebtn">Upload</button>
-                    <input type='file' accept=".png, .jpg, .jpeg, .webp" id="uploadBannerImage" onclick="changebg()" />
-                </div>
-            </div>
-
-            <div class="stitem">
-                <label class="settingstext" for="opninwindow">Open in New Window</label>
-                <label class="switch">
-                <input type="checkbox" checked id="opninwindow" onchange="changewindow()" checked>
-                <span class="slider round"></span>
-            </label>
-            </div>
-
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Animation Time</p class="setoptnnme">
-                <label for="animtime" class="lbl">change transition duration</label>
-                <input type="range" id="animtime" class="settingsset" value="25" onchange="changevalue(this,'--transitionduration','ms',10)">
-            </div>
-
-            <div class="stitem" style="text-align: center;">
-                <p class="sthead">Font size</p>
-            </div>
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Top row</p class="setoptnnme">
-                <label for="vlfontipt" class="lbl">change very largefont size</label>
-                <input type="range" id="vlfontipt" class="settingsset" value="50" onchange="changevalue(this,'--fontverybig','vh',0.07)">
-            </div>
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Heading </p class="setoptnnme">
-                <label for="lfontsizeipt" class="lbl">change large font size</label>
-                <input type="range" id="lfontsizeipt" class="settingsset" value="50" onchange="changevalue(this,'--fontbig','vh',0.06)">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">site name</p class="setoptnnme">
-                <label for="mfontipt" class="lbl">change medum font size</label>
-                <input type="range" id="mfontipt" class="settingsset" value="50" onchange="changevalue(this,'--fontmed','vh',0.04)">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">small font size</p>
-                <label for="sfontipt" class="lbl">change small input</label>
-                <input type="range" id="sfontipt" class="settingsset" value="50" onchange="changevalue(this,'--fontsmall','vh',0.02)">
-            </div>
-            <div class="stitem">
-                <p class="sthead"> Width,padding and margin </p>
-            </div>
-            <div class="stitem">
-
-
-                <p class="setoptnnme" class="settingstext">Site Icon size</p class="setoptnnme">
-                <label for="iconsizeipt" class="lbl">change iconsize</label>
-                <input type="range" id="iconsizeipt" class="settingsset" value="50" onchange="changevalue(this,'--sitewidth','vw',0.5)">
-            </div>
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">icon border radius</p class="setoptnnme">
-                <label for="iconbordeript" class="lbl">change icon border radius</label>
-                <input type="range" id="iconbordeript" class="settingsset" value="80" onchange="changevalue(this,'--icoborderradius','%',0.5)">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Fav sites width</p class="setoptnnme">
-                <label for="fasiteipt" class="lbl">change sites bar width</label>
-                <input type="range" id="fasiteipt" class="settingsset" value="70" onchange="changevalue(this,'--favsiteswidth','vw',1)">
-            </div>
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">padding</p class="setoptnnme">
-                <label for="genpaddingipt" class="lbl">change padding</label>
-                <input type="range" id="genpaddingipt" class="settingsset" value="10" onchange="changevalue(this,'--padding','px',0.5)">
-            </div>
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">margin</p class="setoptnnme">
-                <label for="genmarginipt" class="lbl">change margin</label>
-                <input type="range" id="genmarginipt" class="settingsset" value="30" onchange="changevalue(this,'--margin','px',0.5)">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> Border radius</p class="setoptnnme">
-                <label for="bordeript" class="lbl">change border radius</label>
-                <input type="range" id="bordeript" class="settingsset" value="20" onchange="changevalue(this,'--searchborderradius','px',0.45)">
-            </div>
-
-
-            <div class="stitem" style="text-align: center;">
-                <p class="sthead">Show/Hide</p>
-            </div>
-
-
-            <div class="stitem">
-                <label class="settingstext" for="tshowdate"> Date</label>
-                <label class="switch">
-                <input type="checkbox" checked  id='tshowdate'  onchange="changeswitch(this,'date')">
-                <span class="slider round"></span>
-            </label>
-            </div>
-            <div class="stitem">
-                <label class="settingstext" for="tshowtime"> Time</label>
-                <label class="switch">
-                <input type="checkbox" checked  id='tshowtime' onchange="changeswitch(this,'tmediv')">
-                <span class="slider round"></span>
-            </label>
-            </div>
-            <div class="stitem">
-                <label class="settingstext" for="tshowgreetings">Greetings</label>
-                <label class="switch">
-                <input checked onchange="changeswitch(this,'grtusr')" id="tshowgreetings" type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            </div>
-            <div class="stitem">
-                <label class="settingstext" for="tshowapm"> AM/PM</label>
-                <label class="switch">
-                <input type="checkbox"  checked id="tshowapm"  onchange="changeswitch(this,'ampm')">
-                <span class="slider round"></span>
-            </label>
-            </div>
-
-            <div class="stitem">
-                <label class="settingstext" for="tshowtopbar"> Top Bar</label>
-                <label class="switch">
-                <input type="checkbox" checked id="tshowtopbar" onchange="changeswitch(this,'toppart')">
-                <span class="slider round"></span>
-            </label>
-            </div>
-
-            <div class="stitem">
-                <label class="settingstext" for="tshowfavsites"> Fav Sites</label>
-                <label class="switch">
-                <input type="checkbox" checked id="tshowfavsites" onchange="changeswitch(this,'btmpart')">
-                <span class="slider round"></span>
-            </label>
-            </div>
-
-            <div class="stitem">
-                <p class="sthead">Change colours</p>
-            </div>
-
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Primary colour</p>
-                <label for="primecoul" class="lbl">change primary colour</label>
-                <input type="color" id="primecoul" onchange="changecol(this,'--primarycol')" class="settingsset" value="#00ff00">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">secondary colour</p>
-                <label for="primedarkcoul" class="lbl">change secondary colour</label>
-                <input type="color" id="primedarkcoul" onchange="changecol(this,'--primarydark')" class="settingsset" value="#ff0000">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">font colour</p>
-                <label for="fontscoul" class="lbl">change font colour</label>
-                <input type="color" id="fontscoul" onchange="changecol(this,'--fontcolor')" class="settingsset" value="#ffffff">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> searchbar colour</p>
-                <label for="searchcoul" class="lbl">change searchbar colour</label>
-                <input type="color" id="searchcoul" onchange="changecol(this,'--searchbarcol')" class="settingsset" value="#ffffff">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> Actions colour</p>
-                <label for="actionscoul" class="lbl">change actions colour</label>
-                <input type="color" id="actionscoul" onchange="changecol(this,'--actioncol')" class="settingsset" value="#333333">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Icon colour</p>
-                <label for="iconscoul" class="lbl">change icon colour</label>
-                <input type="color" id="iconscoul" onchange="changecol(this,'--iconbackgroundcol')" class="settingsset" value="#ffffff">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext">Settings Background colour</p>
-                <label for="settbackcoul" class="lbl">change settings background colour</label>
-                <input type="color" id="settbackcoul" class="settingsset" onchange="changecol(this,'--menubackgroundcol')" value="#525252">
-            </div>
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> Hour colour</p>
-                <label for="hourcoul" class="lbl">change hour colour</label>
-                <input type="color" id="hourcoul" class="settingsset" onchange="changecol(this,'--timehourcol')" value="#ff0000">
-            </div>
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> Minute colour</p>
-                <label for="mincoul" class="lbl">change minute colour</label>
-                <input type="color" id="mincoul" class="settingsset" onchange="changecol(this,'--timeminutecol')" value="#00ff00">
-            </div>
-
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> AM/PM colour</p>
-                <label for="ampmcoul" class="lbl">change AM/PM colour</label>
-                <input type="color" id="ampmcoul" onchange="changecol(this,'--ampmcol')" class="settingsset" value="#00ff00">
-            </div>
-
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> Name color</p>
-                <label for="namecoul" class="lbl">change name colour</label>
-                <input type="color" id="namecoul" class="settingsset" onchange="changecol(this,'--grtnamecol')" value="#0000ff">
-            </div>
-
-            <div class="stitem">
-                <p class="setoptnnme" class="settingstext"> Date colour</p>
-                <label for="datecoul" class="lbl">change date colour</label>
-                <input type="color" id="datecoul" class="settingsset" onchange="changecol(this,'--datecol')" value="#ff00ff">
-            </div>
 
         </div>
-
+        <div class="stitem">
+            <label class="settingstext" for="uploadBannerImage"> Change wallpaper</label>
+            <div class="parent-div">
+                <div class="btn-upload" id="wpchangebtn">Upload</div>
+                <input type='file' accept=".png, .jpg, .jpeg, .webp" id="uploadBannerImage" />
+            </div>
+        </div>
+        <div class="stitem">
+            <label class="settingstext" for="opninwindow">Open in New Window</label>
+            <label class="switch">
+                <input type="checkbox" checked id="opninwindow" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">Animation Time</p class="setoptnnme">
+            <label for="animtime" class="lbl">change transition duration</label>
+            <input type="range" id="animtime" class="settingsset" value="25">
+        </div>
+        <div class="stitem">
+            <p class="sthead">Font size</p>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">Font Size</p class="setoptnnme">
+            <label for="vlfontipt" class="lbl">change font size</label>
+            <input type="range" id="vlfontipt" class="settingsset" value="50">
+        </div>
+        <div class="stitem">
+            <p class="sthead"> Width, padding and margin </p>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">Site Icon size</p class="setoptnnme">
+            <label for="iconsizeipt" class="lbl">change iconsize</label>
+            <input type="range" id="iconsizeipt" class="settingsset" value="50">
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">icon border radius</p class="setoptnnme">
+            <label for="iconbordeript" class="lbl">change icon border radius</label>
+            <input type="range" id="iconbordeript" class="settingsset" value="80">
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">Fav sites width</p class="setoptnnme">
+            <label for="fasiteipt" class="lbl">change sites bar width</label>
+            <input type="range" id="fasiteipt" class="settingsset" value="70">
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">padding</p class="setoptnnme">
+            <label for="genpaddingipt" class="lbl">change padding</label>
+            <input type="range" id="genpaddingipt" class="settingsset" value="10">
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">margin</p class="setoptnnme">
+            <label for="genmarginipt" class="lbl">change margin</label>
+            <input type="range" id="genmarginipt" class="settingsset" value="30">
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext"> Border radius</p class="setoptnnme">
+            <label for="bordeript" class="lbl">change border radius</label>
+            <input type="range" id="bordeript" class="settingsset" value="20">
+        </div>
+        <div class="stitem">
+            <p class="sthead">Show/Hide</p>
+        </div>
+        <div class="stitem">
+            <label class="settingstext" for="tshowdate"> Date</label>
+            <label class="switch">
+                <input type="checkbox" checked id='tshowdate'>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="stitem">
+            <label class="settingstext" for="tshowtime"> Time</label>
+            <label class="switch">
+                <input type="checkbox" checked id='tshowtime' ">
+                <span class=" slider round"></span>
+            </label>
+        </div>
+        <div class="stitem">
+            <label class="settingstext" for="tshowgreetings">Greetings</label>
+            <label class="switch">
+                <input checked id="tshowgreetings" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="stitem">
+            <label class="settingstext" for="tshowtopbar"> Top Bar</label>
+            <label class="switch">
+                <input type="checkbox" checked id="tshowtopbar"">
+                <span class=" slider round"></span>
+            </label>
+        </div>
+        <div class="stitem">
+            <label class="settingstext" for="tshowfavsites"> Fav Sites</label>
+            <label class="switch">
+                <input type="checkbox" checked id="tshowfavsites">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="stitem">
+            <p class="sthead">Change colours</p>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">Primary colour</p>
+            <label for="primecoul" class="lbl">change primary colour</label>
+            <div class="col-container"> <input type="color" id="primecoul" class="settingsset" value="#00ff00"></div>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">font colour</p>
+            <label for="fontscoul" class="lbl">change font colour</label>
+            <div class="col-container"> <input type="color" id="fontscoul" class="settingsset" value="#ffffff"></div>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext"> searchbar colour</p>
+            <label for="searchcoul" class="lbl">change searchbar colour</label>
+            <div class="col-container"> <input type="color" id="searchcoul" class="settingsset" value="#ffffff"></div>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext"> Actions colour</p>
+            <label for="actionscoul" class="lbl">change actions colour</label>
+            <div class="col-container"> <input type="color" id="actionscoul" class="settingsset" value="#333333"></div>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext">Icon colour</p>
+            <label for="iconcoul" class="lbl">change icon colour</label>
+            <div class="col-container"> <input type="color" id="iconcoul" class="settingsset" value="#ffffff"></div>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext"> Time colour</p>
+            <label for="hourcoul" class="lbl">change hour colour</label>
+            <div class="col-container"> <input type="color" id="hourcoul" class="settingsset" value="#ff0000"></div>
+        </div>
+        <div class="stitem">
+            <p class="setoptnnme" class="settingstext"> Srearch text color</p>
+            <label for="namecoul" class="lbl">change search text colour</label>
+            <div class="col-container"> <input type="color" id="namecoul" class="settingsset" value="#0000ff"></div>
+        </div>
     </div>
-
 </body>
-<script src="js/Localstorage.js" defer></script>
-<script src="js/settings.js" defer></script>
-<script src="js/functions.js" defer></script>
-<script src="js/index.js" defer></script>
-
-
-
-<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js" defer></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js" defer></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js" defer></script>
-<script src="js/firebase.js" defer></script>
-
-
-
-
+<script src="dist/main.js" defer></script>
 </html>
-<!-------------------------------------------------------  end of code   ----------------------------------------------------->
