@@ -1,5 +1,6 @@
+
 {
-    "name": "Home",
+    "name": "Homepage",
     "short_name": "Home",
     "start_url": "/",
     "display": "minimal-ui",
@@ -10,25 +11,25 @@
     "scope": "/",
     "theme_color": "#0000ff",
     "icons": [{
-            "src": "/pwaicons/manifest-icon-192.maskable.png",
+            "src": "pwaicons/manifest-icon-192.maskable.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "/pwaicons/manifest-icon-192.maskable.png",
+            "src": "pwaicons/manifest-icon-192.maskable.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "/pwaicons/manifest-icon-512.maskable.png",
+            "src": "pwaicons/manifest-icon-512.maskable.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "/pwaicons/manifest-icon-512.maskable.png",
+            "src": "pwaicons/manifest-icon-512.maskable.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
