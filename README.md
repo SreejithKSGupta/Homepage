@@ -4,7 +4,7 @@ Homepage is a website that is meant to replace your default browser homepage, wi
 The published version of the website is available on home5559.web.app , which can be used to isntantly change your homepage on browsers that allow changing 
 default tab like chrome and firefox directly, or using extentions such as new tab changer in browsers that does not support that, like edge. 
 
-#version 4 updates
+##version 4 updates
 -- More responsive
 -- Better optimized for mobile phones, and Fold devices
 -- Faster and smoother ( implemented caching, changed animation sequence)
