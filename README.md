@@ -5,12 +5,12 @@ The published version of the website is available on home5559.web.app , which ca
 default tab like chrome and firefox directly, or using extentions such as new tab changer in browsers that does not support that, like edge. 
 
 ##version 4 updates
--- More responsive
--- Better optimized for mobile phones, and Fold devices
--- Faster and smoother ( implemented caching, changed animation sequence)
--- Added ability to search for content type as well 
--- Organized site icons better to fit center
--- Added the ability to edit site details
+#### -- More responsive
+#### -- Better optimized for mobile phones, and Fold devices
+#### -- Faster and smoother ( implemented caching, changed animation sequence)
+#### -- Added ability to search for content type as well 
+#### -- Organized site icons better to fit center
+#### -- Added the ability to edit site details
 
 ##  Features 
  #### -- add and remove as many favourite sites 
