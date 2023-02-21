@@ -17,6 +17,12 @@ default tab like chrome and firefox directly, or using extentions such as new ta
  #### -- sync favourite sites and notes across devices
  #### -- show or hide any section of the homepage, to get more productive, or minimalist.
  #### -- cuztomize every part of the homepage, from corner radius and font  to shape and size of sites.
+ 
+ ## Todo
+ #### Search with go button on mobile phone
+ #### translucent settigns Panel
+ #### Switch to toggle site name
+ #### Equaly aligned site icons, with last row following the same format
 
 ## Stack
  #### -- Front end made using Vanilla JavaScript, HTML5 and CSS
