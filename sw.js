@@ -5,12 +5,15 @@ const assetRoute = new workbox.routing.RegExpRoute({
   
   //cache all requests of static assets and images of the format png, jpg, jpeg, gif, svg, webp, ico, tiff, bmp, or webp
     regExp: new RegExp('https://(www\.)?homepage\.com/(static|images)/.*\.(png|jpg|jpeg|gif|svg|webp|ico|tiff|bmp|webp)'),
-    handler: new workbox.runtimeCaching.StaleWhileRevalidate()
+    handler: new workbox.runtimeCaching.NetworkFirst()
 });
 
 const router = new workbox.routing.Router();
 //router.addFetchListener();
 router.registerRoutes({routes: [assetRoute]});
 router.setDefaultHandler({
-    handler:new workbox.runtimeCaching.StaleWhileRevalidate()
+   
+    // cache all requests , and update the cache from the network in the background
+    handler: new workbox.runtimeCaching.NetworkFirst()
+    
 });

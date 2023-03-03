@@ -5,7 +5,7 @@ module.exports = {
     entry: './public/js/firebase.js',
     output: {
         path: path.resolve(__dirname, './public/dist'),
-        filename: 'index.js'
+        filename: 'homeindex.js'
     },
     watch: true,
 
