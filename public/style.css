@@ -460,6 +460,9 @@ input[type="text"],select{
     }
     #div-sites{
     width: 95vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 0.5fr));
     } 
   #searchbox, #provider,#SType{
     font-size: clamp(1rem,calc(var(--font-size) * 0.4rem),1rem);
