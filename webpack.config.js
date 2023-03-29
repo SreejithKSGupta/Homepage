@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
     mode: 'production',
-    entry: './public/js/firebase.js',
+    entry: './public/firebase.js',
     output: {
-        path: path.resolve(__dirname, './public/dist'),
-        filename: 'homeindex.js'
+        path: path.resolve(__dirname, './public'),
+        filename: 'index.js'
     },
     watch: true,
 

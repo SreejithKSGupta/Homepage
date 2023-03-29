@@ -202,9 +202,8 @@ select > option {
 /* ///////////////////////////////////////////////       bottompart        ////////////////////////////////////////*/
 #div-sites {
     height: 60vh;
-    justify-content:space-around;
-    align-items:flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width:var(--favsiteswidth);
     overflow-y: scroll;
     margin-left: auto;
