@@ -1,6 +1,6 @@
 # Homepage
 
-Homepage is a website that is meant to replace your default browser homepage, with one that is more user firendly, feature rich, complete and customizable.
+Homepage is a webApp that is meant to replace your default browser homepage, with one that is more user firendly, feature rich, complete and customizable.
 The published version of the website is available on home5559.web.app , which can be used to isntantly change your homepage on browsers that allow changing 
 default tab like chrome and firefox directly, or using extentions such as new tab changer in browsers that does not support that, like edge. 
 
