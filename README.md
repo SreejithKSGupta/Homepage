@@ -39,7 +39,6 @@ Settings
 ![homepaage minimalist](https://user-images.githubusercontent.com/72187226/196019293-b06de1fb-5bf0-45ec-ad2f-ade797e009d0.png)
 Minimalist
 
-![homepage notes](https://user-images.githubusercontent.com/72187226/196019291-95e14ff4-394e-4aae-8c49-ad7e82fe26ad.png)
-Notes
+
 
 
